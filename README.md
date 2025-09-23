@@ -28,4 +28,4 @@ Proyecto realizado por:
 - Jonathan Soza ([JSoza1](https://github.com/JSoza1))  
 - Facundo Rey ([reyfacundo](https://github.com/reyfacundo))  
 - Brenda FaltaAgregarApellido ([BrenCrash](https://github.com/BrenCrash))  
-- Tamara FaltaAgregarApellido ([FaltaGitHub](#))  
+- Tamara Albarracín ([tmy-a](https://github.com/tmy-a))  
