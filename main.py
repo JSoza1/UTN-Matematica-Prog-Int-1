@@ -23,13 +23,13 @@ while True:
                         es_valido = False
 
             if es_valido: #Si esta bandera sigue estando en True...
-                numero = int(numero)
+                numero = int(numero) #Se convierte el input original a entero para que pueda ser usado en la división
                 break
             else:
                 print("Error: debe ingresar solo números enteros positivos.")
             #Retorna para que lo intentes nuevamente
 
-        # conversión decimal a binario
+        ############### Decimal a Binario #################
         if numero == 0:
             print("El numero binario es 0")
         else:
