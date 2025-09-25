@@ -1,9 +1,16 @@
-invalid = True  # Variable de control(flag) para repetir el ingreso hasta que sea válido
+# Variable de control(flag) para repetir el ingreso hasta que sea válido
+invalid = True
 
 # Bucle para validar que el número ingresado sea binario
 while invalid:
     numero = input("Ingrese un número binario: ")
-    digitos = list(numero)  # Convierte el número ingresado en una lista de caracteres
+    # Convierte el número ingresado en una lista de caracteres
+    digitos = list(numero)
+
+    if len(numero) == 0:  # Chequea que la cadena no esté vacía
+        print("No ingresaste nada. Intentá de nuevo.")
+        continue
+
     for i in range(len(digitos)):
         # Verifica que cada dígito sea '0' o '1'
         if digitos[i] != '1':
@@ -14,9 +21,9 @@ while invalid:
         # Si todos los dígitos son válidos, sale del bucle
         invalid = False
 
-digitos.reverse()  # Invierte la lista para que la posición 0 sea el dígito menos significativo
+# Invierte la lista para que la posición 0 sea el dígito menos significativo
+digitos.reverse()
 decimal = 0
-print(digitos)  # Muestra la lista invertida (opcional, para depuración)
 
 # Recorre la lista y suma el valor decimal correspondiente a cada dígito
 for i in range(len(digitos)):
