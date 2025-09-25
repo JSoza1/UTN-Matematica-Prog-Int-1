@@ -8,9 +8,28 @@ while True:
     print("0. Salir")
 
     opt = input("Elija una opcion: ")
-    if opt == "1":
-        numero = int(input("Ingrese un numero decimal: "))
 
+    if opt == "1":
+        # pedir número hasta que sea válido
+        while True:
+            numero = input("Ingrese un numero decimal positivo: ")
+            es_valido = True #Bandera de validación
+
+            if numero == "":   #Si el user no ingresa ningun valor
+                es_valido = False #Bandera cambia a FALSO
+            else:
+                for caracter in numero: #recorriendo caracteres ingresados
+                    if caracter < "0" or caracter > "9":
+                        es_valido = False
+
+            if es_valido: #Si esta bandera sigue estando en True...
+                numero = int(numero) #Se convierte el input original a entero para que pueda ser usado en la división
+                break
+            else:
+                print("ERROR. Debe ingresar solo números enteros positivos. Intente nuevamente")
+            #Retorna para que lo intentes nuevamente
+
+        ############### Decimal a Binario #################
         if numero == 0:
             print("El numero binario es 0")
         else:
@@ -36,7 +55,7 @@ while True:
                 # Verifica que cada dígito sea '0' o '1'
                 if digitos[i] != '1':
                     if digitos[i] != '0':
-                        print("El número ingresado no es un binario válido.")
+                        print("ERROR. Lo ingresado no corresponde a numeros binarios. Intente nuevamente")
                         break
             else:
                 # Si todos los dígitos son válidos, sale del bucle
