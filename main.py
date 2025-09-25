@@ -35,8 +35,8 @@ while True:
         else:
             binario = ""
             while numero > 0:
-                resto = numero % 2
-                binario = str(resto) + binario
+                resto = numero % 2 #calculo del resto
+                binario = str(resto) + binario #colocamos cada nuevo resto al inicio de la cadena
                 numero = numero // 2
             print("El numero en binario es:", binario)
 
