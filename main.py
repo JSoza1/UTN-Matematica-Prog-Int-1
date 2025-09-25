@@ -8,18 +8,37 @@ while True:
     print("0. Salir")
 
     opt = input("Elija una opcion: ")
-    if opt == "1":
-        numero = int(input("Ingrese un numero decimal: "))
 
+    if opt == "1":
+        # pedir número hasta que sea válido
+        while True:
+            numero = input("Ingrese un numero decimal positivo: ")
+            es_valido = True #Bandera de validación
+
+            if numero == "":   #Si el user no ingresa ningun valor
+                es_valido = False #Bandera cambia a FALSO
+            else:
+                for caracter in numero: #recorriendo caracteres ingresados
+                    if caracter < "0" or caracter > "9":
+                        es_valido = False
+
+            if es_valido: #Si esta bandera sigue estando en True...
+                numero = int(numero)
+                break
+            else:
+                print("Error: debe ingresar solo números enteros positivos.")
+            #Retorna para que lo intentes nuevamente
+
+        # conversión decimal a binario
         if numero == 0:
             print("El numero binario es 0")
         else:
             binario = ""
             while numero > 0:
-                resto = numero % 2 #calculo del resto
-                binario = str(resto) + binario #colocamos cada nuevo resto al inicio de la cadena
+                resto = numero % 2
+                binario = str(resto) + binario
                 numero = numero // 2
-            print("El numero en binario es: ", binario)
+            print("El numero en binario es:", binario)
 
             #Retorna al menu despues de dar el resultado
 
