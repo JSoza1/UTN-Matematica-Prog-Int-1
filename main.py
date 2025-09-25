@@ -26,7 +26,7 @@ while True:
                 numero = int(numero) #Se convierte el input original a entero para que pueda ser usado en la división
                 break
             else:
-                print("Error: debe ingresar solo números enteros positivos.")
+                print("ERROR. Debe ingresar solo números enteros positivos. Intente nuevamente")
             #Retorna para que lo intentes nuevamente
 
         ############### Decimal a Binario #################
@@ -38,7 +38,7 @@ while True:
                 resto = numero % 2 #calculo del resto
                 binario = str(resto) + binario #colocamos cada nuevo resto al inicio de la cadena
                 numero = numero // 2
-            print("El numero en binario es:", binario)
+            print("El numero en binario es: ", binario)
 
             #Retorna al menu despues de dar el resultado
 
@@ -55,7 +55,7 @@ while True:
                 # Verifica que cada dígito sea '0' o '1'
                 if digitos[i] != '1':
                     if digitos[i] != '0':
-                        print("El número ingresado no es un binario válido.")
+                        print("ERROR. Lo ingresado no corresponde a numeros binarios. Intente nuevamente")
                         break
             else:
                 # Si todos los dígitos son válidos, sale del bucle
